@@ -1,0 +1,22 @@
+.thumbnails-container {
+    display: flex;
+    width: auto;
+    height: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* background-color: lightblue; */
+    flex-direction: row;
+
+}
+
+.thumbnail {
+    margin: 10px;
+
+}
+
+.thumbnail:hover {
+    cursor: pointer;
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+}
