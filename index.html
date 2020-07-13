@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo slide with pure Javascript</title>
+</head>
+
+<body>
+    <img id="current-photo" src="img/img1.jpg" width="700px">
+    <br> <br>
+    <input type="button" id="previous" name="previous" value="Previous" onclick="previous()">
+    <input type="button" id="next" name="next" value="Next" onclick="next()">
+
+</body>
+
+<script>
+    var i = 1, numberOfFiles = 5;
+    var currentPhoto = document.getElementById("current-photo");
+    function show() {
+        var fileName = "img/img" + i + ".jpg";
+        currentPhoto.src = fileName;
+    }
+    function next() {
+        if (i < numberOfFiles) {
+            i += 1;
+            show();
+        } else if (i === numberOfFiles) {
+            i = 1;
+            show();
+        };
+    };
+
+    function previous() {
+        if (i <= numberOfFiles && i > 1) {
+            i -= 1;
+            show();
+        } else if (i <= 1) {
+            i = numberOfFiles;
+            show();
+        }
+    };
+
+</script>
+
+</html>
